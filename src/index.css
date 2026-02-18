@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+
+@theme {
+  /* Ini akan menimpa font sans default menjadi Inter */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Tambahan agar font Inter terlihat lebih smooth di browser */
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
